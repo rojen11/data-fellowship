@@ -55,7 +55,7 @@ export const Navbar:React.FC<NavbarProps> = (props) => {
                       : "text-gray-800 hover:text-gray-600") +
                     " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
-                  href="#about"
+                  href="https://codefornepal.org/#about"
                 >
                   {/* <i
                     className={
@@ -143,7 +143,7 @@ export const Navbar:React.FC<NavbarProps> = (props) => {
                 </a>
               </li>
 
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <button
                   className={
                     (props.transparent
@@ -156,7 +156,7 @@ export const Navbar:React.FC<NavbarProps> = (props) => {
                 >
                   <i className="far fa-check-circle"></i> Apply
                 </button>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

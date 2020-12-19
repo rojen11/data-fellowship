@@ -29,28 +29,97 @@ export const Footer:React.FC = () => {
                 Let's keep in touch!
               </h4>
               <h5 className="text-lg mt-0 mb-2 text-gray-200">
-                Find us on any of these platforms, we respond 1-2 business days.
+                Find us on any of these platforms.
               </h5>
-              <div className="mt-6">
-                <button
-                  className="bg-gray-200 text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                  type="button"
+              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+              <li className="flex items-center">
+                <a
+                  className={
+                    (true
+                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
+                      : "text-gray-800 hover:text-gray-600") +
+                    " pr-6 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  }
+                  href="https://www.facebook.com/codefornepal"
+                  target="_blank"
+                  rel="noreferrer noopener"
                 >
-                  <i className="flex fab fa-twitter"></i>
-                </button>
-                <button
-                  className="bg-gray-200 text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                  type="button"
+                  <i
+                    className={
+                      (true
+                        ? "lg:text-gray-300 text-gray-500"
+                        : "text-gray-500") +
+                      " fab fa-facebook text-lg leading-lg "
+                    }
+                  />
+                  <span className="lg:hidden inline-block ml-2">Share</span>
+                </a>
+              </li>
+
+              <li className="flex items-center">
+                <a
+                  className={
+                    (true
+                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
+                      : "text-gray-800 hover:text-gray-600") +
+                    " pr-6 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  }
+                  href="https://twitter.com/codefornepal"
+                  target="_blank"
+                  rel="noreferrer noopener"
+
                 >
-                  <i className="flex fab fa-facebook-square"></i>
-                </button>
-                <button
-                  className="bg-gray-200 text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                  type="button"
+                  <i
+                    className={
+                      (true
+                        ? "lg:text-gray-300 text-gray-500"
+                        : "text-gray-500") +
+                      " fab fa-twitter text-lg leading-lg "
+                    }
+                  />
+                  <span className="lg:hidden inline-block ml-2">Tweet</span>
+                </a>
+              </li>
+
+              <li className="flex items-center">
+                <a
+                  className={
+                    (true
+                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
+                      : "text-gray-800 hover:text-gray-600") +
+                    " pr-6 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  }
+                  href="https://github.com/code4Nepal"
+                  target="_blank"
+                  rel="noreferrer noopener"
                 >
-                  <i className="flex fab fa-github"></i>
+                  <i
+                    className={
+                      (true
+                        ? "lg:text-gray-300 text-gray-500"
+                        : "text-gray-500") +
+                      " fab fa-github text-lg leading-lg "
+                    }
+                  />
+                  <span className="lg:hidden inline-block ml-2">Star</span>
+                </a>
+              </li>
+
+              {/* <li className="flex items-center">
+                <button
+                  className={
+                    (true
+                      ? "bg-white text-gray-800 active:bg-gray-100"
+                      : "bg-pink-500 text-white active:bg-pink-600") +
+                    " text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                  }
+                  type="button"
+                  style={{ transition: "all .15s ease" }}
+                >
+                  <i className="far fa-check-circle"></i> Apply
                 </button>
-              </div>
+              </li> */}
+            </ul>
             </div>
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
@@ -61,25 +130,20 @@ export const Footer:React.FC = () => {
                   <ul className="list-unstyled">
                     <li>
                       <a className="text-gray-200 hover:text-gray-400 font-semibold block pb-2 text-sm"
-                         href="https://www.creative-tim.com/presentation">About Us
+                         href="https://codefornepal.org/#about">About Us
                       </a>
                     </li>
                     <li>
                       <a className="text-gray-200 hover:text-gray-400 font-semibold block pb-2 text-sm"
-                         href="https://blog.creative-tim.com">Blog
+                         href="https://codefornepal.org/blog/">Blog
                       </a>
                     </li>
                     <li>
                       <a className="text-gray-200 hover:text-gray-400 font-semibold block pb-2 text-sm"
-                         href="https://www.github.com/creativetimofficial">Github
+                         href="https://github.com/code4Nepal">Github
                       </a>
                     </li>
-                    <li>
-                      <a className="text-gray-200 hover:text-gray-400 font-semibold block pb-2 text-sm"
-                         href="https://www.creative-tim.com/bootstrap-themes/free">Free Products
-                      </a>
-                    </li>
-
+                    
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
@@ -89,22 +153,7 @@ export const Footer:React.FC = () => {
                   <ul className="list-unstyled">
                     <li>
                       <a className="text-gray-200 hover:text-gray-400  font-semibold block pb-2 text-sm"
-                      href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md">MIT License
-                    </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-200 hover:text-gray-400  font-semibold block pb-2 text-sm"
-                         href="https://creative-tim.com/terms">Terms & Conditions
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-200 hover:text-gray-400  font-semibold block pb-2 text-sm"
-                         href="https://creative-tim.com/privacy">Privacy Policy
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-200 hover:text-gray-400  font-semibold block pb-2 text-sm"
-                         href="https://creative-tim.com/contact-us">Contact Us
+                         href="https://codefornepal.org/#about">Contact Us
                       </a>
                     </li>
                   </ul>
