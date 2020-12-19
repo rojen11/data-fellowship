@@ -31,7 +31,7 @@ export const AboutTheScholarship:React.FC = () =>{
                             </div>
 
                             <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-                                <div className="relative flex flex-col min-w-0 break-word w-full mb-6 shadow-lg rounded-lg bg-cblue">
+                                <div className="relative flex flex-col min-w-0 break-word w-full mb-6 shadow-lg rounded-lg bg-secondary">
                                 <img
                                     alt="..."
                                     className="max-w-full rounded-lg shadow-lg"

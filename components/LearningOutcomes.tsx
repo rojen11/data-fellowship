@@ -32,7 +32,7 @@ export const LearningOutcomes:React.FC = () =>{
                             </div>
                             <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                                 <div className="md:pr-12">
-                                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-cblue">
+                                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-secondary">
                                         <i className="fas fa-rocket text-xl"></i>
                                     </div>
                                     <h3 className="text-3xl font-semibold">
@@ -47,7 +47,7 @@ export const LearningOutcomes:React.FC = () =>{
                                         <li className="py-2">
                                             <div className="flex items-center">
                                                 <div>
-                                                    <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-cblue mr-3">
+                                                    <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-secondary mr-3">
                                                         <i className="fas fa-fingerprint"></i>
                                                     </span>
                                                 </div>
@@ -61,7 +61,7 @@ export const LearningOutcomes:React.FC = () =>{
                                         <li className="py-2">
                                             <div className="flex items-center">
                                                 <div>
-                                                    <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-cblue mr-3">
+                                                    <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-secondary mr-3">
                                                         <i className="fab fa-html5"></i>
                                                     </span>
                                                 </div>
@@ -73,7 +73,7 @@ export const LearningOutcomes:React.FC = () =>{
                                         <li className="py-2">
                                             <div className="flex items-center">
                                                 <div>
-                                                    <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-cblue mr-3">
+                                                    <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-secondary mr-3">
                                                         <i className="far fa-paper-plane"></i>
                                                     </span>
                                                 </div>
