@@ -1,27 +1,27 @@
 
 import { getAllContents } from '../lib/api'
-import Post from '../types/post'
+import Content from '../types/content'
 import { AboutProgram } from '../components/AboutProgram'
 import { AboutTheScholarship } from '../components/AboutTheScholarship'
 import { LearningOutcomes } from '../components/LearningOutcomes'
 import { PersonalDevelopment } from '../components/PersonalDevelopment'
 import { Layout } from '../components/Layout'
-
+import ContentType from '../types/content'
+import markdownToHtml from '../lib/markdownToHtml'
+interface NormalizedObject {
+    [slug:string]:ContentType
+}
 type Props = {
-    allContents: Post[]
+    allContents:NormalizedObject
 }
 
-const Index = ({ allContents }: Props) => {
-    const heroPost = allContents[0]
-    const morePosts = allContents.slice(1)
+const Index:React.FC<Props> = ({allContents}) => {
     return (
         <Layout>
-
-            <AboutProgram />
-            <AboutTheScholarship />
+            <AboutProgram data={allContents.AboutProgram || {}} />
+            <AboutTheScholarship data={allContents.AboutTheScholarship || {}} />
             <LearningOutcomes />
             <PersonalDevelopment />
-
 
             <section className="pb-20 relative block bg-primary">
                 <div
@@ -79,17 +79,25 @@ const Index = ({ allContents }: Props) => {
 
 export default Index
 
-export const getStaticProps = async () => {
-    const allContents = getAllContents([
+export async function getStaticProps() {
+    const allContentsNoHtml = getAllContents([
         'title',
-        'date',
-        'slug',
-        'author',
-        'coverImage',
-        'excerpt',
+        'image',
+        'content'
     ])
-
+    const keys = Object.keys(allContentsNoHtml)
+    const allContentsWithHtml = await new Promise<NormalizedObject>(async(resolve) =>{
+        let newObjects:NormalizedObject = {}
+        for (let i = 0 ; i < keys.length;i++){
+            const currentObject = allContentsNoHtml[keys[i]]
+            const html = await markdownToHtml(currentObject.content)
+            newObjects = {...newObjects,[keys[i]]:{...currentObject,content:html}}
+            if(Object.keys(newObjects).length === keys.length){
+                resolve(newObjects)
+            }
+        }
+    })
     return {
-        props: { allContents },
+        props: { allContents:allContentsWithHtml },
     }
 }

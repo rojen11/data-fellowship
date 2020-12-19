@@ -1,6 +1,10 @@
-
-export const AboutProgram: React.FC = () => {
-    const about:any = {}
+import ContentType from "../types/content"
+import MarkdownComponent from './MarkdownComponent'
+export interface Props{
+    data:ContentType
+}
+export const AboutProgram: React.FC<Props> = (props) => {
+    const {data} = props;
     return (
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
             style={{
@@ -14,15 +18,12 @@ export const AboutProgram: React.FC = () => {
             </div>
             <div className="container relative mx-auto">
                 <div className="items-center flex flex-wrap">
-                    <div className="w-full lg:w-3/5 px-4 ml-auto mr-auto text-center">
+                    <div className="w-full lg:w-3/5 px-4 ml-auto mr-auto text-center text-white">
                         <div className="pr-12">
                             <h1 className="text-white font-semibold md:text-5xl">
-                                {about.title}
+                                {data.title}
                     </h1>
-                            <h2 className={'text-white font-semibold md:text-3xl pt-4'}>{about.organizer}</h2>
-                            <p className="mt-4 md:text-lg text-gray-300">
-                                {about.description}
-                    </p>
+                                <MarkdownComponent content={data.content}/>
                         </div>
                     </div>
 

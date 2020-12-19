@@ -1,10 +1,11 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
+import ContentType from '../types/content'
 
 const postsDirectory = join(process.cwd(), '_contents')
 
-export function getPostSlugs() {
+export function getContentSlugs() {
   return fs.readdirSync(postsDirectory)
 }
 
@@ -38,10 +39,13 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 }
 
 export function getAllContents(fields: string[] = []) {
-  const slugs = getPostSlugs()
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    // sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-  return posts
+  const slugs = getContentSlugs()
+  let contents:{[slug:string]:ContentType} = {}
+  slugs
+    .forEach((slug) => {
+      const content = getPostBySlug(slug, ['slug',...fields]) as ContentType
+      
+      contents = {...contents,[content.slug]:content}
+    })
+  return contents
 }
