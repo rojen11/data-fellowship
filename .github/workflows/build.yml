@@ -12,6 +12,9 @@ jobs:
 
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         uses: actions/setup-node@v1
+      - run: mkdir _contents
+      - run: git clone git@github.com:CodeforNepal/fellowship-data.git
+      - run: cp -r ./fellowship-data/hawkins/_contents/* ./_contents/
       - run: yarn
       - run: yarn build
         env:
@@ -20,7 +23,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
