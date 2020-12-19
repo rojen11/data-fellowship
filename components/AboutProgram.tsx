@@ -12,18 +12,20 @@ export const AboutProgram: React.FC<Props> = (props) => {
             }}>
             <div className="absolute top-0 w-full h-full bg-center bg-cover"
                 style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')"
+                    backgroundImage: `url(${data.image})`
                 }}>
                 <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
             </div>
             <div className="container relative mx-auto">
                 <div className="items-center flex flex-wrap">
-                    <div className="w-full lg:w-3/5 px-4 ml-auto mr-auto text-center text-white">
+                    <div className="w-full lg:w-4/5 px-4 ml-auto mr-auto text-center">
                         <div className="pr-12">
                             <h1 className="text-white font-semibold md:text-5xl">
                                 {data.title}
                     </h1>
+                    <div className="mt-4 tracking-wider leading-relaxed text-white">
                                 <MarkdownComponent content={data.content}/>
+                                </div>
                         </div>
                     </div>
 

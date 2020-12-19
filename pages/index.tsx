@@ -2,8 +2,8 @@
 import { getAllContents } from '../lib/api'
 import Content from '../types/content'
 import { AboutProgram } from '../components/AboutProgram'
-import { AboutTheScholarship } from '../components/AboutTheScholarship'
-import { LearningOutcomes } from '../components/LearningOutcomes'
+import { TextLeft } from '../components/TextLeft'
+import { TextRight } from '../components/TextRight'
 import { PersonalDevelopment } from '../components/PersonalDevelopment'
 import { Layout } from '../components/Layout'
 import ContentType from '../types/content'
@@ -19,9 +19,10 @@ const Index:React.FC<Props> = ({allContents}) => {
     return (
         <Layout>
             <AboutProgram data={allContents.AboutProgram || {}} />
-            <AboutTheScholarship data={allContents.AboutTheScholarship || {}} />
-            <LearningOutcomes />
-            <PersonalDevelopment />
+            <TextLeft data={allContents.AboutTheScholarship || {}} />
+            <TextRight data={allContents.LearningOutcomes || {}} />
+            <TextLeft data ={allContents.PersonalDevelopment || {}} />
+            <TextRight data={allContents.ApplicationDetails || {}} />
 
             <section className="pb-20 relative block bg-primary">
                 <div
