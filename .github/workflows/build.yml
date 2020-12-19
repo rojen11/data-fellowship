@@ -23,6 +23,7 @@ jobs:
       - run: cd ./main && yarn
       - run: cd ./main && yarn build
       - run: cp -r ./main/out .
+      - run: touch ./out/.nojekyll
         env:
             CI: true
 
