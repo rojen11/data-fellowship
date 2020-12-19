@@ -8,6 +8,7 @@ import { TextOnly } from '../components/TextOnly'
 import { Layout } from '../components/Layout'
 import ContentType from '../types/content'
 import markdownToHtml from '../lib/markdownToHtml'
+import { formUrl } from '../config'
 interface NormalizedObject {
     [slug:string]:ContentType
 }
@@ -51,10 +52,10 @@ const Index:React.FC<Props> = ({allContents}) => {
                             <h2 className="text-4xl font-semibold text-white">
                                 Apply Now
                 </h2>
-                            <p className="text-lg leading-relaxed mt-4 mb-4 text-white">
+                            {/* <p className="text-lg leading-relaxed mt-4 mb-4 text-white">
                                 Put the potentially record low maximum sea ice extent tihs year down to low ice.
                                 According to the National Oceanic and Atmospheric Administration, Ted, Scambos.
-                </p>
+                </p> */}
                         </div>
                     </div>
 
@@ -66,7 +67,7 @@ const Index:React.FC<Props> = ({allContents}) => {
                         <div className="w-full lg:w-4/5 px-4">
                             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-200">
                                 {/* <div className="flex-auto p-5 lg:p-10"> */}
-                                <iframe title="Application Form" src="https://docs.google.com/forms/d/e/1FAIpQLSfdX3PT_egW3Vsahj3NyNSY8dcjD7WTNfXjlvg7Ksu2o8CTcQ/viewform?embedded=true" height="700" frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
+                                <iframe title="Application Form" src={formUrl} height="700" frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
                                 {/* </div> */}
                             </div>
                         </div>
