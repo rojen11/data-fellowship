@@ -37,6 +37,7 @@ const Meta = () => {
         content={`${APP_NAME}`}
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous"/>
       </Head>
   )
 }
