@@ -4,7 +4,7 @@ import Content from '../types/content'
 import { AboutProgram } from '../components/AboutProgram'
 import { TextLeft } from '../components/TextLeft'
 import { TextRight } from '../components/TextRight'
-import { PersonalDevelopment } from '../components/PersonalDevelopment'
+import { TextOnly } from '../components/TextOnly'
 import { Layout } from '../components/Layout'
 import ContentType from '../types/content'
 import markdownToHtml from '../lib/markdownToHtml'
@@ -22,7 +22,7 @@ const Index:React.FC<Props> = ({allContents}) => {
             <TextLeft data={allContents.AboutTheScholarship || {}} />
             <TextRight data={allContents.LearningOutcomes || {}} />
             <TextLeft data ={allContents.PersonalDevelopment || {}} />
-            <TextRight data={allContents.ApplicationDetails || {}} />
+            <TextOnly data={allContents.ApplicationDetails || {}} />
 
             <section className="pb-20 relative block bg-primary">
                 <div
