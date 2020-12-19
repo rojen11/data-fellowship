@@ -22,7 +22,7 @@ jobs:
       - run: cp -r ./data/hawkins/_contents ./main
       - run: cd ./main && yarn
       - run: cd ./main && yarn build
-      - run: cp -r ./main/out ./out
+      - run: cp -r ./main/out .
         env:
             CI: true
 
