@@ -3,11 +3,12 @@ import MarkdownComponent from "./MarkdownComponent"
 
 export interface Props {
     data: ContentType
+    gray?:boolean
 }
 export const TextOnly: React.FC<Props> = (props) => {
-    const { data } = props
+    const { data,gray } = props
     return (
-        <section className="relative py-20">
+        <section className={`relative py-20 ${gray? 'bg-gray-300':''}`}>
             <div
                 className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
                 style={{ height: "80px", transform: "translateZ(0)" }}
@@ -22,7 +23,7 @@ export const TextOnly: React.FC<Props> = (props) => {
                     y="0"
                 >
                     <polygon
-                        className="text-white fill-current"
+                        className={`${gray? 'text-gray-300':'text-white'} fill-current`}
                         points="2560 0 2560 100 0 100"
                     ></polygon>
                 </svg>

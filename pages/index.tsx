@@ -25,9 +25,9 @@ const Index:React.FC<Props> = ({allContents}) => {
             <title>{APP_NAME}</title>
             </Head>
             <AboutProgram data={allContents.AboutProgram || {}} />
-            <TextLeft data={allContents.AboutTheScholarship || {}} />
-            <TextRight data={allContents.LearningOutcomes || {}} />
-            <TextLeft data ={allContents.PersonalDevelopment || {}} />
+            <TextOnly gray data={allContents.AboutTheScholarship || {}} />
+            <TextOnly data={allContents.LearningOutcomes || {}} />
+            <TextOnly gray data ={allContents.PersonalDevelopment || {}} />
             <TextOnly data={allContents.ApplicationDetails || {}} />
 
             <section className="pb-20 relative block bg-primary">
