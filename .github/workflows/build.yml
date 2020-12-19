@@ -22,15 +22,14 @@ jobs:
           persist-credentials: false
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         uses: actions/setup-node@v1
-        env:
-          NEXT_PUBLIC_FORM_URL: ${{ secrets.NEXT_PUBLIC_FORM_URL }}
       - run: cp -r ./data/hawkins/_contents ./main
       - run: cd ./main && yarn
       - run: cd ./main && yarn build
+        env:
+          NEXT_PUBLIC_FORM_URL: ${{ secrets.NEXT_PUBLIC_FORM_URL }}
+          CI: true
       - run: cp -r ./main/out .
       - run: touch ./out/.nojekyll
-        env:
-          CI: true
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
