@@ -1,3 +1,3 @@
 module.exports={
-    assetPrefix:'.'
+    basePath:'/fellowship'
 }
