@@ -9,6 +9,8 @@ import { Layout } from '../components/Layout'
 import ContentType from '../types/content'
 import markdownToHtml from '../lib/markdownToHtml'
 import { formUrl } from '../config'
+import Head from 'next/head'
+import { APP_NAME } from '../lib/constants'
 interface NormalizedObject {
     [slug:string]:ContentType
 }
@@ -19,6 +21,9 @@ type Props = {
 const Index:React.FC<Props> = ({allContents}) => {
     return (
         <Layout>
+            <Head>
+            <title>{APP_NAME}</title>
+            </Head>
             <AboutProgram data={allContents.AboutProgram || {}} />
             <TextLeft data={allContents.AboutTheScholarship || {}} />
             <TextRight data={allContents.LearningOutcomes || {}} />
