@@ -18,12 +18,12 @@ export const AboutProgram: React.FC<Props> = (props) => {
             </div>
             <div className="container relative mx-auto">
                 <div className="items-center flex flex-wrap">
-                    <div className="w-full lg:w-4/5 px-4 ml-auto mr-auto text-center">
-                        <div className="pr-12">
-                            <h1 className="text-white font-semibold md:text-5xl">
+                    <div className="w-full lg:w-3/5 px-4 ml-auto mr-auto text-left">
+                        <div>
+                            <h1 className="text-white font-semibold text-3xl pt-16 md:text-5xl">
                                 {data.title}
                     </h1>
-                    <div className="mt-4 tracking-wider leading-relaxed text-white">
+                    <div className="mt-4 tracking-wider leading-relaxed text-white text-xs">
                                 <MarkdownComponent content={data.content}/>
                                 </div>
                         </div>

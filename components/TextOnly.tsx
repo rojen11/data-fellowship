@@ -30,8 +30,8 @@ export const TextOnly: React.FC<Props> = (props) => {
             </div>
 
             <div className="container mx-auto px-4">
-                <div className="flex flex-wrap justify-center text-center mb-24">
-                    <div className="w-full lg:w-4/5 px-4">
+                <div className="flex flex-wrap justify-center text-left mb-24">
+                    <div className="w-full lg:w-3/5 px-4">
                         <h2 className="text-4xl font-semibold">
                             {data.title}
                 </h2>
