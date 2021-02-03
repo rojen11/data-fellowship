@@ -72,7 +72,7 @@ const Index:React.FC<Props> = ({allContents}) => {
                         <div className="w-full lg:w-4/5 px-4">
                             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-200">
                                 {/* <div className="flex-auto p-5 lg:p-10"> */}
-                                <iframe title="Application Form" src={formUrl || 'https://docs.google.com/forms/d/e/1FAIpQLSdkTYHTfezikzpzrux_K42hHnDTbSuGOd0sYZlk7Fmkxmyrrg/viewform?embedded=true'} height="700" frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
+                                <iframe title="Application Form" src={formUrl || ''} height="700" frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
                                 {/* </div> */}
                             </div>
                         </div>
