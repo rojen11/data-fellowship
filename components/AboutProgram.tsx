@@ -12,7 +12,7 @@ export const AboutProgram: React.FC<Props> = (props) => {
             }}>
             <div className="absolute top-0 w-full h-full bg-center bg-cover"
                 style={{
-                    backgroundImage: `url('/assets/markus.jpg')`
+                    backgroundImage: `url('./assets/markus.jpg')`
                 }}>
                 <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
             </div>
