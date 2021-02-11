@@ -1,6 +1,4 @@
 .markdown {
-  @apply text-lg;
-  @apply leading-relaxed;
 }
 
 .markdown p,
@@ -8,6 +6,7 @@
 .markdown ol,
 .markdown blockquote {
   @apply my-6;
+  @apply mb-6; @apply leading-loose;  @apply text-gray-700;
 }
 .markdown ol li {
   list-style: decimal;

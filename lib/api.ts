@@ -15,11 +15,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
-  type Items = {
-    [key: string]: string
-  }
-
-  const items: Items = {}
+  const items: Partial<ContentType> = {}
 
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
@@ -31,7 +27,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     }
 
     if (data[field]) {
-      items[field] = data[field]
+      items[field as keyof Partial<ContentType>] = data[field]
     }
   })
 
@@ -40,12 +36,9 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 
 export function getAllContents(fields: string[] = []) {
   const slugs = getContentSlugs()
-  let contents:{[slug:string]:ContentType} = {}
-  slugs
-    .forEach((slug) => {
-      const content = getPostBySlug(slug, ['slug',...fields]) as ContentType
-      
-      contents = {...contents,[content.slug]:content}
-    })
+  const contents = slugs
+    .map((slug) => {
+      return getPostBySlug(slug, ['slug',...fields]) as ContentType
+    }).sort((data1, data2) => (data1.order < data2.order ? -1 : 1))
   return contents
 }

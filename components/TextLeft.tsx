@@ -7,54 +7,34 @@ export interface Props {
 export const TextLeft: React.FC<Props> = (props) => {
     const { data } = props
     return (
-        <section className="relative py-20 bg-gray-300">
-            <div
-                className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-                style={{ height: "80px", transform: "translateZ(0)" }}
-            >
-                <svg
-                    className="absolute bottom-0 overflow-hidden"
-                    xmlns="http://www.w3.org/2000/svg"
-                    preserveAspectRatio="none"
-                    version="1.1"
-                    viewBox="0 0 2560 100"
-                    x="0"
-                    y="0"
-                >
-                    <polygon
-                        className="text-gray-300 fill-current"
-                        points="2560 0 2560 100 0 100"
-                    ></polygon>
-                </svg>
+        <section className="py-20">
+        <div className="container px-4 mx-auto">
+          <div className="flex flex-wrap -mx-3">
+            <div className="w-full md:w-1/2 px-3 order-1 md:order-0">
+              <div className="w-full mx-auto">
+                <h2 className="mb-4 text-3xl md:text-4xl font-bold font-heading">{data.title}</h2>
+              <MarkdownComponent content={data.content}/>
+                {/* <p className="mb-6 leading-loose text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis.</p>
+                <ul>
+                  <li className="py-4">
+                    <span className="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-50 text-green-600 rounded">1</span>
+                    <span>Proin volutpat ex eu</span>
+                  </li>
+                  <li className="py-4">
+                    <span className="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-50 text-green-600 rounded">2</span>
+                    <span>Fusce posuere nibh in cursus</span>
+                  </li>
+                  <li className="py-4">
+                    <span className="inline-block py-2 px-3 mr-4 text-xs font-semibold bg-green-50 text-green-600 rounded">3</span>
+                    <span>Maecenas sit amet vehicula</span>
+                  </li>
+                </ul> */}
+              </div>
             </div>
-
-            <div className="container mx-auto px-4">
-                <div className="items-center flex flex-wrap">
-                <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
-                        <div className="md:pr-12">
-                            <div className="text-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-500">
-                                <i className="fas fa-rocket text-xl"></i>
-                            </div>
-                            <h3 className="text-3xl font-semibold">
-                                {data.title}
-                            </h3>
-                            <div className="mt-4 text-lg leading-relaxed text-gray-700">
-                                <MarkdownComponent content={data.content} />
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
-                        <img
-                            alt="..."
-                            className="max-w-full rounded-lg shadow-lg"
-                            src={data.image}
-                        />
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
+            <div className="w-full md:w-1/2 px-3 order-0 md:order-1 mb-12 md:mb-0"><img className="sm:max-w-sm lg:max-w-full mx-auto" src="assets/about.svg" alt=""/></div>
+          </div>
+        </div>
+      </section>
 
     )
 }

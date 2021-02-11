@@ -13,3 +13,7 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+
+body,html{
+    background-color: #f9fafc;
+}

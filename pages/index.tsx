@@ -1,9 +1,10 @@
 
 import { getAllContents } from '../lib/api'
-import Content from '../types/content'
+import { ComponentProps } from '../types/content'
 import { AboutProgram } from '../components/AboutProgram'
 import { TextLeft } from '../components/TextLeft'
 import { TextRight } from '../components/TextRight'
+import { Steps } from '../components/Steps'
 import { TextOnly } from '../components/TextOnly'
 import { Layout } from '../components/Layout'
 import ContentType from '../types/content'
@@ -11,24 +12,33 @@ import markdownToHtml from '../lib/markdownToHtml'
 import { formUrl } from '../config'
 import Head from 'next/head'
 import { APP_NAME } from '../lib/constants'
-interface NormalizedObject {
-    [slug:string]:ContentType
-}
+
 type Props = {
-    allContents:NormalizedObject
+    allContents:ContentType[]
 }
 
+const AvailableTemplates:{[id:string]:React.ComponentType<ComponentProps>} = {
+    aboutProgram: AboutProgram,
+    steps: Steps,
+    right: TextRight,
+    left: TextLeft,
+    DEFAULT: TextOnly
+}
 const Index:React.FC<Props> = ({allContents}) => {
     return (
         <Layout>
             <Head>
-            <title>{APP_NAME}</title>
+            <title>{allContents[0].title}</title>
             </Head>
-            <AboutProgram data={allContents.AboutProgram || {}} />
+            {allContents.map((content) => {
+                const Template = AvailableTemplates[content.template] || AvailableTemplates.DEFAULT
+                return Template && <Template key={content.slug} data={content}/>
+            })}
+            {/* <AboutProgram data={allContents.AboutProgram || {}} />
             <TextOnly gray data={allContents.AboutTheScholarship || {}} />
             <TextOnly data={allContents.LearningOutcomes || {}} />
             <TextOnly gray data ={allContents.PersonalDevelopment || {}} />
-            <TextOnly data={allContents.ApplicationDetails || {}} />
+            <TextOnly data={allContents.ApplicationDetails || {}} /> */}
 
             <section className="pb-20 relative block bg-primary">
                 <div
@@ -90,17 +100,19 @@ export async function getStaticProps() {
     const allContentsNoHtml = getAllContents([
         'title',
         'image',
+        'order',
+        'steps',
+        'template',
         'content'
     ])
-    const keys = Object.keys(allContentsNoHtml)
-    const allContentsWithHtml = await new Promise<NormalizedObject>(async(resolve) =>{
-        let newObjects:NormalizedObject = {}
-        for (let i = 0 ; i < keys.length;i++){
-            const currentObject = allContentsNoHtml[keys[i]]
+    const allContentsWithHtml = await new Promise<ContentType[]>(async(resolve) =>{
+        const withHtml = []
+        for (let i = 0 ; i < allContentsNoHtml.length;i++){
+            const currentObject = allContentsNoHtml[i]
             const html = await markdownToHtml(currentObject.content)
-            newObjects = {...newObjects,[keys[i]]:{...currentObject,content:html}}
-            if(Object.keys(newObjects).length === keys.length){
-                resolve(newObjects)
+            withHtml.push({...currentObject,content:html})
+            if(withHtml.length === allContentsNoHtml.length){
+                resolve(withHtml)
             }
         }
     })

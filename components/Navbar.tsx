@@ -1,14 +1,35 @@
 import { useState } from "react";
 
-export interface NavbarProps{
-  transparent?:boolean
-}
-export const Navbar:React.FC<NavbarProps> = (props) => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+export const Navbar: React.FC = (props) => {
   return (
     <>
-      <nav
-        className={
+    <div className="container px-4 mx-auto" >
+    <nav className="flex justify-between items-center py-6">
+            <a className="text-3xl font-semibold leading-none" href="https://codefornepal.org"><img className="h-10" src="https://codefornepal.org/assets/img/c4n_logo.png" alt="" width="auto" /></a>
+            <div className="lg:hidden">
+              <button className="navbar-burger flex items-center py-2 px-3 text-blue-600 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300">
+                <svg className="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
+            </div>
+            <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+              {/* <li><a className="text-sm text-blueGray-400 hover:text-blueGray-500" href="#">Product</a></li> */}
+              {/* <li><a className="text-sm text-blueGray-400 hover:text-blueGray-500" href="#">Company</a></li> */}
+              <li><a className="text-sm text-secondary hover:text-primary" href="#">About Us</a></li>
+              {/* <li><a className="text-sm text-blueGray-400 hover:text-blueGray-500" href="#">Features</a></li> */}
+            </ul>
+            {/* <div className="hidden lg:block"><a className="mr-2 inline-block px-4 py-3 text-xs text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a><a className="inline-block px-4 py-3 text-xs font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded" href="#">Sign Up</a></div> */}
+          </nav>
+          </div>
+      
+    </>
+  );
+}
+
+      {/* <nav
+        classNameName={
           (props.transparent
             ? "top-0 absolute z-50 w-full"
             : "relative shadow-lg bg-white") +
@@ -57,14 +78,6 @@ export const Navbar:React.FC<NavbarProps> = (props) => {
                   }
                   href="https://codefornepal.org/#about"
                 >
-                  {/* <i
-                    className={
-                      (props.transparent
-                        ? "lg:text-gray-300 text-gray-500"
-                        : "text-gray-500") +
-                      " far fa-file-alt text-lg leading-lg mr-2"
-                    }
-                  />{" "} */}
                   About Us
                 </a>
               </li>
@@ -143,24 +156,8 @@ export const Navbar:React.FC<NavbarProps> = (props) => {
                 </a>
               </li>
 
-              {/* <li className="flex items-center">
-                <button
-                  className={
-                    (props.transparent
-                      ? "bg-white text-gray-800 active:bg-gray-100"
-                      : "bg-pink-500 text-white active:bg-pink-600") +
-                    " text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
-                  }
-                  type="button"
-                  style={{ transition: "all .15s ease" }}
-                >
-                  <i className="far fa-check-circle"></i> Apply
-                </button>
-              </li> */}
+             
             </ul>
           </div>
         </div>
-      </nav>
-    </>
-  );
-}
+      </nav> */}

@@ -4,7 +4,7 @@ import {Footer} from './Footer'
 export const Layout:React.FC = ({children}) =>{
     return(
         <>
-         <Navbar transparent />
+         <Navbar />
         <Meta/>
             <main>
         {children}
