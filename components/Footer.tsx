@@ -131,17 +131,11 @@ export const Footer:React.FC = () => {
               </div>
             </div>
           </div>
-          <hr className="my-6 border-gray-200" />
+          <hr className="mb-6 border-gray-200" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-200 font-semibold py-1">
-                Copyright © {new Date().getFullYear()}{" "}
-                <a
-                  href="https://codefornepal.org"
-                  className="text-gray-200 hover:text-gray-900"
-                >
-                  Code for Nepal
-                </a>.
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style={{borderWidth:0}} src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" className="mx-auto" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
               </div>
             </div>
           </div>

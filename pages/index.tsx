@@ -77,7 +77,9 @@ export async function getStaticProps() {
         'order',
         'steps',
         'template',
-        'content'
+        'content',
+        'experpt',
+        'ogimage'
     ])
     const allContentsWithHtml = await new Promise<ContentType[]>(async(resolve) =>{
         const withHtml = []

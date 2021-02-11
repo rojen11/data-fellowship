@@ -10,6 +10,8 @@ interface ContentType {
     detail: string
   }[]
   content: string
+  experpt?: string
+  ogimage?: string
 }
 export interface ComponentProps {
   data: ContentType

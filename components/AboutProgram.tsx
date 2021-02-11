@@ -1,3 +1,4 @@
+import Head from "next/head";
 import {ComponentProps} from "../types/content"
 import MarkdownComponent from './MarkdownComponent'
 
@@ -5,6 +6,15 @@ export const AboutProgram: React.FC<ComponentProps> = (props) => {
     const { data } = props;
     return (
         <section className="xl:bg-contain bg-top bg-no-repeat">
+          <Head>
+          {data.experpt && <meta
+        name="description"
+        content={`${data.experpt}`}
+        
+      />}
+
+{data.ogimage &&  <meta property="og:image" content={data.ogimage} />}
+          </Head>
         <div className="container md:px-4 mx-auto">
           
           <div className="py-12 md:text-center text-left">
