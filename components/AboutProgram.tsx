@@ -5,9 +5,9 @@ export const AboutProgram: React.FC<ComponentProps> = (props) => {
     const { data } = props;
     return (
         <section className="xl:bg-contain bg-top bg-no-repeat">
-        <div className="container px-4 mx-auto">
+        <div className="container md:px-4 mx-auto">
           
-          <div className="py-12 text-center">
+          <div className="py-12 md:text-center text-left">
             <div className="w-4/5 mx-auto mb-8">
               <h2 className="text-3xl md:text-4xl mb-4 font-bold font-heading text-secondary">
                {data.title} {new Date().getFullYear()}
@@ -23,8 +23,9 @@ export const AboutProgram: React.FC<ComponentProps> = (props) => {
             <div className="absolute bg-gray-100 rounded-lg px-8 pt-2" style={{ top: '3%', left: '9%', width: '82%', height: '90%', }}><img className="object-contain w-full h-full" src="assets/data.svg" alt="" /></div>
           </div>
            <div className="flex flex-wrap items-center justify-center max-w-4xl mx-auto pt-8 pb-12">
-            <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/okn.png" alt="" /></div>
+            <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="https://codefornepal.org/assets/img/c4n_logo.png" alt="" /></div>
             <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/datacamp.png" alt="" /></div>
+            <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8 ml-4"><img className="mx-auto" src="assets/okn.png" alt="" /></div>
             {/* <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/marvel.svg" alt="" /></div> */}
             {/* <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/nike.svg" alt="" /></div> */}
             {/* <div className="hidden md:block w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/airbnb.svg" alt=""/></div> */}

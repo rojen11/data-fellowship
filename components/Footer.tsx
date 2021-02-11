@@ -16,9 +16,7 @@ export const Footer:React.FC = () => {
               <li className="flex items-center">
                 <a
                   className={
-                    (true
-                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
-                      : "text-gray-800 hover:text-gray-600") +
+                    "text-gray-300" +
                     " pr-6 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
                   href="https://www.facebook.com/codefornepal"
@@ -27,22 +25,18 @@ export const Footer:React.FC = () => {
                 >
                   <i
                     className={
-                      (true
-                        ? "lg:text-gray-300 text-gray-500"
-                        : "text-gray-500") +
+                      "text-gray-300" +
                       " fab fa-facebook text-lg leading-lg "
                     }
                   />
-                  <span className="lg:hidden inline-block ml-2">Share</span>
+                  <span className="lg:hidden inline-block ml-2">Facebook</span>
                 </a>
               </li>
 
               <li className="flex items-center">
                 <a
                   className={
-                    (true
-                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
-                      : "text-gray-800 hover:text-gray-600") +
+                      "text-gray-300" +
                     " pr-6 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
                   href="https://twitter.com/codefornepal"
@@ -52,22 +46,18 @@ export const Footer:React.FC = () => {
                 >
                   <i
                     className={
-                      (true
-                        ? "lg:text-gray-300 text-gray-500"
-                        : "text-gray-500") +
+                      "text-gray-300" +
                       " fab fa-twitter text-lg leading-lg "
                     }
                   />
-                  <span className="lg:hidden inline-block ml-2">Tweet</span>
+                  <span className="lg:hidden inline-block ml-2">Twitter</span>
                 </a>
               </li>
 
               <li className="flex items-center">
                 <a
                   className={
-                    (true
-                      ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
-                      : "text-gray-800 hover:text-gray-600") +
+                    "text-gray-300" +
                     " pr-6 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
                   href="https://github.com/code4Nepal"
@@ -76,13 +66,11 @@ export const Footer:React.FC = () => {
                 >
                   <i
                     className={
-                      (true
-                        ? "lg:text-gray-300 text-gray-500"
-                        : "text-gray-500") +
+                      "text-gray-300" +
                       " fab fa-github text-lg leading-lg "
                     }
                   />
-                  <span className="lg:hidden inline-block ml-2">Star</span>
+                  <span className="lg:hidden inline-block ml-2">Github</span>
                 </a>
               </li>
 
@@ -102,9 +90,9 @@ export const Footer:React.FC = () => {
               </li> */}
             </ul>
             </div>
-            <div className="w-full lg:w-6/12 px-4">
+            <div className="w-full lg:w-6/12 px-4 py-4 md:py-0">
               <div className="flex flex-wrap items-top mb-6">
-                <div className="w-full lg:w-4/12 px-4 ml-auto">
+                <div className="w-full lg:w-4/12 md:px-4 ml-auto">
                   <span className="block uppercase text-white text-sm font-semibold mb-2">
                     Useful Links
                   </span>
@@ -127,7 +115,7 @@ export const Footer:React.FC = () => {
                     
                   </ul>
                 </div>
-                <div className="w-full lg:w-4/12 px-4">
+                <div className="w-full lg:w-4/12 md:px-4 py-4 md:py-0">
                   <span className="block uppercase text-white text-sm font-semibold mb-2">
                     Other Resources
                   </span>

@@ -8,7 +8,7 @@ export const Steps: React.FC<Props> = (props) => {
     const { data } = props
     return (
         <section className="py-12 md:py-32 overflow-x-hidden w-4/5 mx-auto">
-            <div className="container px-4 mx-auto">
+            <div className="container md:px-4 mx-auto">
                 <div className="flex flex-wrap lg:flex-nowrap">
                     <div className="w-full lg:w-1/2">
                         <div className="py-6 lg:pr-32">
