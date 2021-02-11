@@ -31,7 +31,7 @@ export const TextLeft: React.FC<Props> = (props) => {
                 </ul> */}
               </div>
             </div>
-            <div className="w-full md:w-1/2 px-3 order-0 md:order-1 mb-12 md:mb-0"><img className="sm:max-w-sm lg:max-w-full mx-auto" src={data.image || "assets/about.svg"} alt=""/></div>
+            <div className="w-full md:w-1/2 px-12 order-0 md:order-1 mb-12 md:mb-0 flex items-center"><img className="sm:max-w-sm lg:max-w-full mx-auto" src={data.image || "assets/about.svg"} alt=""/></div>
           </div>
         </div>
       </section>

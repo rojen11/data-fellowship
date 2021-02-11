@@ -10,7 +10,7 @@ export const TextRight: React.FC<Props> = (props) => {
         <section className="py-12 md:py-32 w-4/5 mx-auto">
         <div className="container px-4 mx-auto">
           <div className="flex flex-wrap -mx-3">
-            <div className="w-full md:w-1/2 px-3 order-0 md:order-1 mb-12 md:mb-0"><img className="sm:max-w-sm lg:max-w-full mx-auto" src={data.image || "assets/about.svg"} alt=""/></div>
+            <div className="w-full md:w-1/2 px-12 order-0 md:order-1 mb-12 md:mb-0 flex items-center"><img className="sm:max-w-sm lg:max-w-full mx-auto" src={data.image || "assets/about.svg"} alt=""/></div>
             <div className="w-full md:w-1/2 px-3 order-1 md:order-0">
               <div className="w-full mx-auto">
                 <h2 className="mb-4 text-3xl md:text-4xl font-bold font-heading">{data.title}</h2>

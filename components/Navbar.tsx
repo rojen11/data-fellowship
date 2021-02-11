@@ -1,26 +1,24 @@
 import { useState } from "react";
+import { APP_NAME } from "../lib/constants";
 
 export const Navbar: React.FC = (props) => {
+  const [show,setShow] = useState<boolean>(false)
   return (
     <>
     <div className="container px-4 mx-auto" >
     <nav className="flex justify-between items-center py-6">
             <a className="text-3xl font-semibold leading-none" href="https://codefornepal.org"><img className="h-10" src="https://codefornepal.org/assets/img/c4n_logo.png" alt="" width="auto" /></a>
-            <div className="lg:hidden">
+            {/* <div className="lg:hidden">
               <button className="navbar-burger flex items-center py-2 px-3 text-blue-600 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300">
                 <svg className="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <title>Mobile menu</title>
+                  <title>{APP_NAME}</title>
                   <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                 </svg>
               </button>
-            </div>
+            </div> */}
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
-              {/* <li><a className="text-sm text-blueGray-400 hover:text-blueGray-500" href="#">Product</a></li> */}
-              {/* <li><a className="text-sm text-blueGray-400 hover:text-blueGray-500" href="#">Company</a></li> */}
-              <li><a className="text-sm text-secondary hover:text-primary" href="#">About Us</a></li>
-              {/* <li><a className="text-sm text-blueGray-400 hover:text-blueGray-500" href="#">Features</a></li> */}
+              <li><a className="text-sm text-secondary hover:text-primary" href="https://codefornepal.org/#about">About Us</a></li>
             </ul>
-            {/* <div className="hidden lg:block"><a className="mr-2 inline-block px-4 py-3 text-xs text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a><a className="inline-block px-4 py-3 text-xs font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded" href="#">Sign Up</a></div> */}
           </nav>
           </div>
       

@@ -1,6 +1,9 @@
 .markdown {
 }
 
+.markdown a {
+  @apply text-secondary
+}
 .markdown p,
 .markdown ul,
 .markdown ol,

@@ -34,37 +34,11 @@ const Index:React.FC<Props> = ({allContents}) => {
                 const Template = AvailableTemplates[content.template] || AvailableTemplates.DEFAULT
                 return Template && <Template key={content.slug} data={content}/>
             })}
-            {/* <AboutProgram data={allContents.AboutProgram || {}} />
-            <TextOnly gray data={allContents.AboutTheScholarship || {}} />
-            <TextOnly data={allContents.LearningOutcomes || {}} />
-            <TextOnly gray data ={allContents.PersonalDevelopment || {}} />
-            <TextOnly data={allContents.ApplicationDetails || {}} /> */}
-
-            <section className="pb-20 relative block bg-primary">
-                <div
-                    className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-                    style={{ height: "80px", transform: "translateZ(0)" }}
-                >
-                    <svg
-                        className="absolute bottom-0 overflow-hidden"
-                        xmlns="http://www.w3.org/2000/svg"
-                        preserveAspectRatio="none"
-                        version="1.1"
-                        viewBox="0 0 2560 100"
-                        x="0"
-                        y="0"
-                    >
-                        <polygon
-                            className="text-primary fill-current"
-                            points="2560 0 2560 100 0 100"
-                        ></polygon>
-                    </svg>
-                </div>
-
+            <section className="pb-20 relative block bg-gray-300">
                 <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
                     <div className="flex flex-wrap text-center justify-center">
                         <div className="w-full lg:w-4/5 px-4">
-                            <h2 className="text-4xl font-semibold text-white my-20 md:my-0">
+                            <h2 className="text-4xl font-semibold my-20 md:my-0">
                                 Apply Now
                 </h2>
                             {/* <p className="text-lg leading-relaxed mt-4 mb-4 text-white">
@@ -76,7 +50,7 @@ const Index:React.FC<Props> = ({allContents}) => {
 
                 </div>
             </section>
-            <section className="relative block py-24 lg:pt-0 bg-primary">
+            <section className="relative block py-24 lg:pt-0 bg-gray-300">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
                         <div className="w-full lg:w-4/5 px-4">

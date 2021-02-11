@@ -20,15 +20,15 @@ export const AboutProgram: React.FC<ComponentProps> = (props) => {
           </div>
           <div className="relative max-w-3xl mt-6 mb-8 mx-auto">
             <img src="assets/metis-assets/elements/pattern-small.png" alt="" />
-            <div className="absolute bg-gray-100 rounded-lg" style={{ top: '3%', left: '9%', width: '82%', height: '90%', }}><img className="object-contain w-full h-full" src="assets/data.svg" alt="" /></div>
+            <div className="absolute bg-gray-100 rounded-lg px-8 pt-2" style={{ top: '3%', left: '9%', width: '82%', height: '90%', }}><img className="object-contain w-full h-full" src="assets/data.svg" alt="" /></div>
           </div>
-          {/* <div className="flex flex-wrap items-center justify-center max-w-4xl mx-auto pt-8 pb-12">
-            <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/tesla.svg" alt="" /></div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/facebook.svg" alt="" /></div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/marvel.svg" alt="" /></div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/nike.svg" alt="" /></div>
-            <div className="hidden md:block w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/airbnb.svg" alt=""/></div>
-            </div> */}
+           <div className="flex flex-wrap items-center justify-center max-w-4xl mx-auto pt-8 pb-12">
+            <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/okn.png" alt="" /></div>
+            <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/datacamp.png" alt="" /></div>
+            {/* <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/marvel.svg" alt="" /></div> */}
+            {/* <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/nike.svg" alt="" /></div> */}
+            {/* <div className="hidden md:block w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/airbnb.svg" alt=""/></div> */}
+            </div> 
           </div>
           <div className="hidden navbar-menu relative z-50">
             <div className="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"></div>
