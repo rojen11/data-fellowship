@@ -60,7 +60,7 @@ export const Footer:React.FC = () => {
                     "text-gray-300" +
                     " pr-6 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   }
-                  href="https://github.com/code4Nepal"
+                  href="https://github.com/CodeforNepal/data-fellowship"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
