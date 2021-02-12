@@ -6,7 +6,7 @@ export const Navbar: React.FC = (props) => {
     <>
     <div className="container px-4 mx-auto" >
     <nav className="flex justify-between items-center py-6">
-            <a className="text-3xl font-semibold leading-none" href="https://codefornepal.org"><img className="h-10" src="https://codefornepal.org/assets/img/c4n_logo.png" alt="" width="auto" /></a>
+            <a className="text-3xl font-semibold leading-none" target="_blank" rel="noreferrer noopener" href="https://codefornepal.org"><img className="h-10" src="https://codefornepal.org/assets/img/c4n_logo.png" alt="" width="auto" /></a>
             {/* <div className="lg:hidden">
               <button className="navbar-burger flex items-center py-2 px-3 text-blue-600 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300">
                 <svg className="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
