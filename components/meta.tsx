@@ -7,27 +7,27 @@ const Meta = () => {
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/favicon/apple-touch-icon.png"
+        href="https://codefornepal.org/assets/img/c4n-icon.jpg"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="/favicon/favicon.png"
+        href="https://codefornepal.org/assets/img/c4n-icon.jpg"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="/favicon/favicon.png"
+        href="https://codefornepal.org/assets/img/c4n-icon.jpg"
       />
       <link rel="manifest" href="/favicon/site.webmanifest" />
       <link
         rel="mask-icon"
-        href="/favicon/safari-pinned-tab.svg"
+        href="https://codefornepal.org/assets/img/c4n-icon.jpg"
         color="#000000"
       />
-      <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      <link rel="shortcut icon" href="https://codefornepal.org/assets/img/c4n-icon.jpg" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
