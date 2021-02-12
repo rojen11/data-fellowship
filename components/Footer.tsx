@@ -99,16 +99,16 @@ export const Footer:React.FC = () => {
                   <ul className="list-unstyled">
                     <li>
                       <a className="text-gray-200 hover:text-gray-400 font-semibold block pb-2 text-sm"
-                         href="https://codefornepal.org/#about">About Us
+                         href="https://codefornepal.org/#about" target="_blank" rel="noreferrer noopenerr">About Us
                       </a>
                     </li>
                     <li>
-                      <a className="text-gray-200 hover:text-gray-400 font-semibold block pb-2 text-sm"
+                      <a target="_blank" rel="noreferrer noopenerr" className="text-gray-200 hover:text-gray-400 font-semibold block pb-2 text-sm"
                          href="https://codefornepal.org/blog/">Blog
                       </a>
                     </li>
                     <li>
-                      <a className="text-gray-200 hover:text-gray-400 font-semibold block pb-2 text-sm"
+                      <a target="_blank" rel="noreferrer noopenerr" className="text-gray-200 hover:text-gray-400 font-semibold block pb-2 text-sm"
                          href="https://github.com/code4Nepal">Github
                       </a>
                     </li>
@@ -121,7 +121,7 @@ export const Footer:React.FC = () => {
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a className="text-gray-200 hover:text-gray-400  font-semibold block pb-2 text-sm"
+                      <a target="_blank" className="text-gray-200 hover:text-gray-400  font-semibold block pb-2 text-sm"
                          href="https://codefornepal.org/#about">Contact Us
                       </a>
                     </li>
@@ -135,7 +135,7 @@ export const Footer:React.FC = () => {
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-200 font-semibold py-1">
-              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style={{borderWidth:0}} src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" className="mx-auto" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style={{borderWidth:0}} src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" className="mx-auto" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
               </div>
             </div>
           </div>

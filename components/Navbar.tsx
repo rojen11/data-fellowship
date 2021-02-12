@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { APP_NAME } from "../lib/constants";
 
 export const Navbar: React.FC = (props) => {
   const [show,setShow] = useState<boolean>(false)
@@ -17,7 +16,7 @@ export const Navbar: React.FC = (props) => {
               </button>
             </div> */}
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
-              <li><a className="text-sm text-secondary hover:text-primary" href="https://codefornepal.org/#about">About Us</a></li>
+              <li><a target="_blank" rel="noreferrer noopenerr" className="text-sm text-secondary hover:text-primary" href="https://codefornepal.org/#about">About Us</a></li>
             </ul>
           </nav>
           </div>

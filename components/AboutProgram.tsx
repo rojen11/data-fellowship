@@ -41,7 +41,7 @@ export const AboutProgram: React.FC<ComponentProps> = (props) => {
             {/* <div className="hidden md:block w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/airbnb.svg" alt=""/></div> */}
             </div> 
           </div>
-          <div className="hidden navbar-menu relative z-50">
+          {/* <div className="hidden navbar-menu relative z-50">
             <div className="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"></div>
             <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
               <div className="flex items-center mb-8">
@@ -69,7 +69,7 @@ export const AboutProgram: React.FC<ComponentProps> = (props) => {
                 <a className="inline-block px-1" href="#"><img src="assets/metis-assets/icons/facebook-blue.svg" alt="" /></a><a className="inline-block px-1" href="#"><img src="assets/metis-assets/icons/twitter-blue.svg" alt="" /></a><a className="inline-block px-1" href="#"><img src="assets/metis-assets/icons/instagram-blue.svg" alt="" /></a>
               </div>
             </nav>
-          </div>
+          </div> */}
       </section>
     )
 }
