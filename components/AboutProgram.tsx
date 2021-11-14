@@ -35,7 +35,7 @@ export const AboutProgram: React.FC<ComponentProps> = (props) => {
            <div className="flex flex-wrap items-center justify-center max-w-4xl mx-auto pt-8 pb-12">
             <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><a href="https://codefornepal.org/" target="_blank" rel="noreferrer noopener"><img className="mx-auto" src="https://codefornepal.org/assets/img/c4n_logo.png" alt="" /></a></div>
             <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><a href="https://www.datacamp.com/" target="_blank" rel="noreferrer noopener"><img className="mx-auto" src="assets/datacamp.png" alt="" /></a></div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8 ml-4"><a href="https://np.okfn.org/" target="_blank" rel="noreferrer noopener"><img className="mx-auto" src="assets/okn.png" alt="" /></a></div>
+            {/* <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8 ml-4"><a href="https://np.okfn.org/" target="_blank" rel="noreferrer noopener"><img className="mx-auto" src="assets/okn.png" alt="" /></a></div> */}
             {/* <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/marvel.svg" alt="" /></div> */}
             {/* <div className="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/nike.svg" alt="" /></div> */}
             {/* <div className="hidden md:block w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"><img className="mx-auto" src="assets/metis-assets/logos/brands/airbnb.svg" alt=""/></div> */}
