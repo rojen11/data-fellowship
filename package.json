@@ -30,5 +30,8 @@
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.4.0"
   },
+  "engines": {
+    "node": "18.2.0"
+  },
   "license": "MIT"
 }
